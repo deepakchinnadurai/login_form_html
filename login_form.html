@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+  <title>login form</title>
+  <style>
+      .container{
+          text-align: center;
+       
+      }
+      .container input{
+          padding:20px;
+          background-color: aliceblue;
+          border-color: green;
+      }
+      .container button{
+          padding:20px;
+          width:210px;
+          background-color:#252424;
+          font-size: 20px;
+          color:white;
+
+      }
+      .remember{
+          position: relative;
+          left:-40px;
+          color:white;
+      }
+      
+      button:hover {
+      opacity: 0.7;
+      border-color: blue;
+     }
+     
+     .forgot{
+         position: relative;
+         top:30px;
+         left:40px;
+         text-decoration: dotted;
+         color:blue;
+     }
+
+     
+
+     *{
+         background-color: black;
+     }
+  </style>
+
+
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".Register").hide();
+			$(".login").addClass("active");
+
+			$(".login_li").click(function(){
+			  $(".login").show();
+			   $(".Register").hide();
+			})
+
+			$(".register_li").click(function(){
+			  $(".Register").show();
+			   $(".login").hide();
+			})
+    
+            $(".login_li").click(function(){
+                alert("logged in successfully");
+            })
+		});
+	</script>
+  <body>
+     
+      <div class="container login">
+        
+      <h1 style="color:white">Login Form</h1>
+      <form>
+          <input type="string" placeholder="username">
+          <br><br>
+          <input type= "password" placeholder="password" value = ""><br><br>
+          <button class="login_li" >submit</button><br><br>
+          <label class="remember">
+          <input type = "checkbox" name="remember me" >Remember me
+          </label><br>
+          <a class="forgot" href="#">Forgot password?</a>
+      </form>
+  <br><br>
+      <button class="register_li">New User!</button>
+      </div>
+
+      <div class="container Register">
+        
+        <h1 style="color:white">Registration Form</h1>
+        <form>
+            <input type="string" placeholder="username">
+            <br><br>
+            <input type="string" placeholder="email"><br><br>
+            <input type= "password" placeholder="enter password" value = ""><br><br>
+            <input type= "password" placeholder="confirm password" value = ""><br><br>
+            <button>create account</button><br><br>
+            <label class="remember">
+            <input type = "checkbox" name="remember me" >Remember me
+            </label><br>
+            
+        </form>
+    <br><br>
+        <button class="login_li"> Already a user</button>
+        </div>
+      
+      
+  </body>
+</html>
